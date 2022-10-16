@@ -48,7 +48,7 @@ setSearch(e.target.value)
 const getList = () => {
   if (search) {
     return [...list.filter((item)=>
-      item.name.includes(search)
+      item.name.toLowerCase().includes(search.toLowerCase())
     )]
   }
   return list;
